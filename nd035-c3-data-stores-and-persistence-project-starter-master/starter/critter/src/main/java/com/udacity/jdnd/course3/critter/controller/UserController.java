@@ -33,7 +33,7 @@ public class UserController {
     @GetMapping("/customer")
     public List<CustomerDTO> getAllCustomers(){
         List<Customer> customer = customerService.getAllCustomer();
-
+        return null;
     }
 
     private EmployeeDTO EmployeeToDTO(Employee employee){
@@ -47,6 +47,7 @@ public class UserController {
         for(Customer customer: customers){
             customerDTOS.add(customerToDTO(customer));
         }
+        return null;
     }
 
     private CustomerDTO customerToDTO(Customer customer){
@@ -55,6 +56,8 @@ public class UserController {
         for (Pet pet : customer.getPets()) {
             customerDTO.getPetIds().add(pet.getId());
         }
+        return null;
+        
     }
 
 }
